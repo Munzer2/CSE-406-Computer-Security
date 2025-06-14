@@ -38,7 +38,9 @@ function app() {
         });
 
         // Update results
-        this.latencyResults = results;
+        this.latencyResults = Object.fromEntries(
+          results.map((result) => [result.n, result.time])
+        );
         this.status = "Latency data collection complete!";
 
         // Terminate worker
