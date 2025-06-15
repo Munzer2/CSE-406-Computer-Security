@@ -22,7 +22,6 @@ def collect_trace():
     2. Generate a heatmap using matplotlib
     3. Store the heatmap and trace data in the backend temporarily
     4. Return the heatmap image and optionally other statistics to the frontend
-    5. Testing if git works.
     """
 
 @app.route('/api/clear_results', methods=['POST'])
