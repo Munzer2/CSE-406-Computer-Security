@@ -98,3 +98,12 @@ AES_modulus = BitVector(bitstring='100011011')
 # b'hello world\x00\x00\x00\x00\x00'
 # b'\n\x06\x0f\x0fe&x`\x17J\x1c`\x17J\x1c`'
 # b'\xde\x9a\xdf\xff\xbb\xbc\xa7\x9f\xac\xf6\xbb\xff\xbb\xbc\xa7\x9f'
+
+
+PORT = 65431
+
+key_params = {
+        128: {'colCnt': 4, 'Rounds': 11},
+        192: {'colCnt': 6, 'Rounds': 13},
+        256: {'colCnt': 8, 'Rounds': 15}
+    }
