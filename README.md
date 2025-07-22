@@ -63,12 +63,47 @@ Starter code for collecting, storing, post-processing, and classifying network t
 
 ## Setup & Usage
 
-1. **Lab 1**  
+> **Note:** We recommend creating a Python virtual environment for Lab 1 to isolate dependencies.
+
+1. **Lab 1 (Cryptography)**  
    ```bash
    cd Offline1
-   # AES & ECC tasks are scripts; run directly with Python 3
+   # Create & activate a venv
+   python3 -m venv venv
+   source venv/bin/activate        # Linux/macOS
+   # OR on Windows:
+   # .\venv\Scripts\activate
+
+   # Install core dependencies
+   pip install sympy bitvector
+
+   # Run the AES & ECC tasks:
    python3 2005018_task1.py
    python3 2005018_task2.py
-   # In separate terminals:
+
+   # In separate terminals, run Alice & Bob for ECDH:
    python3 2005018_task3_BOB.py
    python3 2005018_task3_ALICE.py
+
+
+2. **Lab 2 (Website fingerprinting)**
+  ```bash
+  cd Offline2/starter_code/template
+  
+  # Create & activate a venv
+  python3 -m venv venv
+  source venv/bin/activate        # Linux/macOS
+  # OR on Windows:
+  # .\venv\Scripts\activate
+  
+  # Install dependencies
+  pip install Flask selenium sqlalchemy torch torchvision matplotlib
+  
+  # Launch backend server
+  python app.py
+  
+  # In another terminal:
+  python collect.py
+  
+  # train models
+  python train.py
